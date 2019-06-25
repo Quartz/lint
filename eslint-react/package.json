@@ -1,0 +1,22 @@
+{
+  "name": "@quartz/eslint-config-react",
+  "version": "1.0.1",
+  "description": "",
+  "repository": "https://github.com/Quartz/lint",
+  "main": "index.js",
+  "scripts": {
+    "eslint": "eslint --ext .js,.jsx --ignore-path .gitignore .",
+    "eslint:fix": "eslint --fix --ext .js,.jsx --ignore-path .gitignore ."
+  },
+  "author": "Quartz",
+  "license": "ISC",
+  "dependencies": {
+    "@quartz/eslint-config-base": "^1.0.1",
+    "eslint": "^6.0.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-react": "^7.14.2"
+  },
+  "devDependencies": {
+    "react": "^16.8.6"
+  }
+}
