@@ -24,6 +24,8 @@ module.exports = {
 			},
 		],
 
+		'react/sort-prop-types': 'error',
+
 		'react/jsx-closing-bracket-location': [
 			'error',
 			'line-aligned',
