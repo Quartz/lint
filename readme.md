@@ -13,6 +13,9 @@ When you make updates to NPM modules (e.g., `eslint-config-base`), you will need
 to update the version of the package, publish it, then update the dependency in
 projects that use it.
 
+If you're changing `eslint-config-base` or `eslint-config-react`,
+you probably want to do steps 1-3 and include step 4 in your pull request.
+
 1. Make sure you have an [NPM account][npm] and it has been added to the
    `@quartz` organization. Contact @chriszarate if you would like to be added.
 
