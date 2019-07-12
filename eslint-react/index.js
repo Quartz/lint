@@ -24,7 +24,12 @@ module.exports = {
 			},
 		],
 
-		'react/sort-prop-types': 'error',
+		'react/sort-prop-types': [
+			'error',
+			{
+				ignoreCase: true,
+			},
+		]
 
 		'react/jsx-closing-bracket-location': [
 			'error',
