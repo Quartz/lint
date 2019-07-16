@@ -128,6 +128,8 @@ module.exports = {
 
 		'no-else-return': 'error',
 
+		'no-nested-ternary': 'error',
+
 		'no-mixed-spaces-and-tabs': 'error',
 
 		'no-param-reassign': [
