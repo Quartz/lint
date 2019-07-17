@@ -36,6 +36,14 @@ module.exports = {
 			'never',
 		],
 
+		'react/jsx-curly-spacing': [
+			'error',
+			{
+				when: 'never',
+				children: true,
+			},
+		],
+
 		'react/jsx-indent-props': [
 			'error',
 			'tab',
