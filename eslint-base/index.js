@@ -22,6 +22,7 @@ module.exports = {
 	},
 
 	plugins: [
+		'es',
 		'import',
 		'jest',
 		'testcafe',
@@ -86,6 +87,18 @@ module.exports = {
 		'eol-last': [
 			'error',
 			'always',
+		],
+
+		'es/no-regexp-lookbehind-assertions': [
+			'error',
+		],
+
+		'es/no-regexp-named-capture-groups': [
+			'error',
+		],
+
+		'es/no-regexp-s-flag': [
+			'error',
 		],
 
 		'import/no-unresolved': [
