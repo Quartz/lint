@@ -72,6 +72,13 @@ module.exports = {
 			},
 		],
 
+		'react/jsx-max-props-per-line': [
+			'error',
+			{
+				maximum: 2,
+			}
+		],
+
 		'react/no-unsafe': [
 			'error',
 			{
