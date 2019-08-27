@@ -110,7 +110,10 @@ module.exports = {
 
 		'indent': [
 			'error',
-			'tab'
+			'tab',
+			{
+				SwitchCase: 1,
+			}
 		],
 
 		'jest/no-disabled-tests': 'error',
