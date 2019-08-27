@@ -108,10 +108,10 @@ module.exports = {
 			},
 		],
 
-    'indent': [
-    	'error',
-    	'tab'
-    ],
+		'indent': [
+			'error',
+			'tab'
+		],
 
 		'jest/no-disabled-tests': 'error',
 
