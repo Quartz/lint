@@ -108,6 +108,14 @@ module.exports = {
 			},
 		],
 
+		'indent': [
+			'error',
+			'tab',
+			{
+				SwitchCase: 1,
+			}
+		],
+
 		'jest/no-disabled-tests': 'error',
 
 		'jest/no-focused-tests': 'error',
