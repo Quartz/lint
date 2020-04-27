@@ -49,6 +49,8 @@ module.exports = {
 			'tab',
 		],
 
+		'react/jsx-key': 'error',
+
 		'react/jsx-no-undef': 'error',
 
 		'react/jsx-pascal-case': [
