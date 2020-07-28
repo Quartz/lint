@@ -22,6 +22,11 @@ module.exports = {
 	},
 
 	plugins: [
+		/**
+		 * Although we aren't using the typescript-eslint parser, this plugin
+		 * gives us access to linter rules that also apply to ES6
+		 */
+		'@typescript-eslint',
 		'es',
 		'import',
 		'jest',
@@ -29,6 +34,8 @@ module.exports = {
 	],
 
 	rules: {
+		'@typescript-eslint/prefer-optional-chain': [ 'error' ],
+
 		'array-bracket-spacing': [
 			'error',
 			'always',
