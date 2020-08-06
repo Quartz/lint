@@ -156,6 +156,14 @@ module.exports = {
 
 		'no-else-return': 'error',
 
+		'no-extra-parens': [
+			'error',
+			'all',
+			{
+				ignoreJSX: 'all',
+			},
+		],
+
 		'no-nested-ternary': 'error',
 
 		'no-mixed-spaces-and-tabs': 'error',
