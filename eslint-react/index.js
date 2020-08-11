@@ -2,6 +2,7 @@ module.exports = {
 	extends: [
 		'@quartz/eslint-config-base',
 		'plugin:jsx-a11y/recommended',
+		'plugin:react-hooks/recommended',
 	],
 
 	plugins: [
