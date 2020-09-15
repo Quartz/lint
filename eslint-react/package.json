@@ -1,6 +1,6 @@
 {
   "name": "@quartz/eslint-config-react",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "repository": "https://github.com/Quartz/lint",
   "main": "index.js",
@@ -14,8 +14,8 @@
     "@quartz/eslint-config-base": "^1.0.1",
     "eslint": "^6.0.1",
     "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.14.2",
-    "eslint-plugin-react-hooks": "^4.0.8"
+    "eslint-plugin-react": "^7.20.6",
+    "eslint-plugin-react-hooks": "^4.1.2"
   },
   "devDependencies": {
     "react": "^16.8.6"
