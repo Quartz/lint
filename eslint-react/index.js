@@ -78,7 +78,7 @@ module.exports = {
 		'react/no-unsafe': [
 			'error',
 			{
-				"checkAliases": true,
+				checkAliases: true,
 			},
 		],
 
