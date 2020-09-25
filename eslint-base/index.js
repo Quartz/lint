@@ -10,6 +10,7 @@ module.exports = {
 	extends: [
 		'plugin:jest/recommended',
 		'plugin:testcafe/recommended',
+		'plugin:@typescript-eslint/recommended',
 	],
 
 	parserOptions: {
@@ -22,10 +23,8 @@ module.exports = {
 	},
 
 	plugins: [
-		/**
-		 * Although we aren't using the typescript-eslint parser, this plugin
-		 * gives us access to linter rules that also apply to ES6
-		 */
+		// This plugin gives us access to useful linter rules that apply to ES6,
+		// regardless of whether the code is JS or TS.
 		'@typescript-eslint',
 		'es',
 		'import',
@@ -34,7 +33,31 @@ module.exports = {
 	],
 
 	rules: {
-		'@typescript-eslint/prefer-optional-chain': [ 'error' ],
+		/** BEGIN disabled rules (overriding extended plugins **/
+
+		// We are migrating gradually and won't yet enforce argument and return
+		// types. Explicit any is a crutch for complex types.
+		'@typescript-eslint/explicit-module-boundary-types': 'off',
+		'@typescript-eslint/no-explicit-any': 'off',
+
+		// Empty functions are useful in tests and as default parameters.
+		'@typescript-eslint/no-empty-function': 'off',
+
+		// Not all code is transpiled (e.g., WebPack config).
+		'@typescript-eslint/no-var-requires': 'off',
+
+		/** END disabled rules (overriding extended plugins **/
+
+		'@typescript-eslint/no-unused-vars': [
+			'error',
+			{
+				varsIgnorePattern: '[iI]gnored',
+			},
+		],
+
+		'@typescript-eslint/no-use-before-define': 'error',
+
+		'@typescript-eslint/prefer-optional-chain': 'error',
 
 		'array-bracket-spacing': [
 			'error',
@@ -60,11 +83,11 @@ module.exports = {
 		'comma-dangle': [
 			'error',
 			{
-				'arrays': 'always-multiline',
-				'objects': 'always-multiline',
-				'imports': 'always-multiline',
-				'exports': 'always-multiline',
-				'functions': 'never',
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'always-multiline',
+				exports: 'always-multiline',
+				functions: 'never',
 			},
 		],
 
@@ -115,12 +138,12 @@ module.exports = {
 			},
 		],
 
-		'indent': [
+		indent: [
 			'error',
 			'tab',
 			{
 				SwitchCase: 1,
-			}
+			},
 		],
 
 		'jest/no-disabled-tests': 'error',
@@ -190,13 +213,6 @@ module.exports = {
 		'no-trailing-spaces': 'error',
 
 		'no-undef': 'error',
-
-		'no-unused-vars': [
-			'error',
-			{
-				varsIgnorePattern: '[iI]gnored',
-			},
-		],
 
 		'no-use-before-define': [
 			'error',
@@ -314,6 +330,8 @@ module.exports = {
 					'.js',
 					'.jsx',
 					'.json',
+					'.ts',
+					'.tsx',
 				],
 			},
 		},
