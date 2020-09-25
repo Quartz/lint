@@ -48,7 +48,6 @@ module.exports = {
 
 		/** END disabled rules (overriding extended plugins **/
 
-
 		'@typescript-eslint/no-unused-vars': [
 			'error',
 			{
@@ -84,11 +83,11 @@ module.exports = {
 		'comma-dangle': [
 			'error',
 			{
-				'arrays': 'always-multiline',
-				'objects': 'always-multiline',
-				'imports': 'always-multiline',
-				'exports': 'always-multiline',
-				'functions': 'never',
+				arrays: 'always-multiline',
+				objects: 'always-multiline',
+				imports: 'always-multiline',
+				exports: 'always-multiline',
+				functions: 'never',
 			},
 		],
 
@@ -139,12 +138,12 @@ module.exports = {
 			},
 		],
 
-		'indent': [
+		indent: [
 			'error',
 			'tab',
 			{
 				SwitchCase: 1,
-			}
+			},
 		],
 
 		'jest/no-disabled-tests': 'error',
@@ -338,4 +337,3 @@ module.exports = {
 		},
 	},
 };
-
