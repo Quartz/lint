@@ -13,6 +13,8 @@ module.exports = {
 		'plugin:@typescript-eslint/recommended',
 	],
 
+	parser: '@typescript-eslint/parser',
+
 	parserOptions: {
 		ecmaFeatures: {
 			experimentalObjectRestSpread: true,
@@ -46,6 +48,10 @@ module.exports = {
 		// Not all code is transpiled (e.g., WebPack config).
 		'@typescript-eslint/no-var-requires': 'off',
 
+		// This is required to be disabled because ... because?
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
+		'no-use-before-define': 'off',
+
 		/** END disabled rules (overriding extended plugins **/
 
 		'@typescript-eslint/no-unused-vars': [
@@ -55,7 +61,12 @@ module.exports = {
 			},
 		],
 
-		'@typescript-eslint/no-use-before-define': 'error',
+		'@typescript-eslint/no-use-before-define': [
+			'error',
+			{
+				functions: false,
+			},
+		],
 
 		'@typescript-eslint/prefer-optional-chain': 'error',
 
@@ -213,13 +224,6 @@ module.exports = {
 		'no-trailing-spaces': 'error',
 
 		'no-undef': 'error',
-
-		'no-use-before-define': [
-			'error',
-			{
-				functions: false,
-			},
-		],
 
 		'no-var': 'error',
 
