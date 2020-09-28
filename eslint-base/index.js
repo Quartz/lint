@@ -48,11 +48,23 @@ module.exports = {
 		// Not all code is transpiled (e.g., WebPack config).
 		'@typescript-eslint/no-var-requires': 'off',
 
-		// This is required to be disabled because ... because?
+		// Superseded by the TypeScript version of this rule.
+		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
+		'no-extra-parens': 'off',
+
+		// Superseded by the TypeScript version of this rule.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
 		'no-use-before-define': 'off',
 
 		/** END disabled rules (overriding extended plugins **/
+
+		'@typescript-eslint/no-extra-parens': [
+			'error',
+			'all',
+			{
+				ignoreJSX: 'all',
+			},
+		],
 
 		'@typescript-eslint/no-unused-vars': [
 			'error',
@@ -189,14 +201,6 @@ module.exports = {
 		'no-duplicate-imports': 'error',
 
 		'no-else-return': 'error',
-
-		'no-extra-parens': [
-			'error',
-			'all',
-			{
-				ignoreJSX: 'all',
-			},
-		],
 
 		'no-nested-ternary': 'error',
 
