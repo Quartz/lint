@@ -58,7 +58,7 @@ module.exports = {
 
 		/** END disabled rules (overriding extended plugins **/
 
-		'@@typescript-eslint/no-extra-parens': [
+		'@typescript-eslint/no-extra-parens': [
 			'error',
 			'all',
 			{
