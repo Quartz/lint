@@ -1,7 +1,6 @@
 module.exports = {
 	'plugins': [
 		'stylelint-at-rule-no-children',
-		'stylelint-declaration-use-variable',
 	],
 	'rules': {
 		'at-rule-no-unknown': [
