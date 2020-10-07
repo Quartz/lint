@@ -14,7 +14,8 @@ module.exports = {
 					'else',
 					'for',
 					'mixin',
-					'content'
+					'content',
+					'use'
 				]
 			}
 		],
