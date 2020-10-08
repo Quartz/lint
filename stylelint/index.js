@@ -1,7 +1,6 @@
 module.exports = {
 	'plugins': [
 		'stylelint-at-rule-no-children',
-		'stylelint-declaration-use-variable',
 	],
 	'rules': {
 		'at-rule-no-unknown': [
@@ -15,7 +14,8 @@ module.exports = {
 					'else',
 					'for',
 					'mixin',
-					'content'
+					'content',
+					'use'
 				]
 			}
 		],
@@ -204,17 +204,6 @@ module.exports = {
 		'value-list-comma-space-after': 'always-single-line',
 		'value-list-comma-space-before': 'never',
 		'value-list-max-empty-lines': 0,
-		'aditayvm/at-rule-no-children': [{ 'ignore': ['mixin', 'for'] }],
-		'sh-waqar/declaration-use-variable': [['z-index', 'color', 'background-color', {
-			'ignoreValues': [
-				'auto',
-				'inherit',
-				'initial',
-				'transparent',
-				'unset',
-				'/rgba\(.+\)/',
-				'/var\(.+\)/',
-			]
-		}]]
+		'aditayvm/at-rule-no-children': [{ 'ignore': ['mixin', 'for'] }]
 	},
 };
