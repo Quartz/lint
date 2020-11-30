@@ -1,6 +1,6 @@
 {
   "name": "@quartz/eslint-config-base",
-  "version": "1.6.4",
+  "version": "1.6.5",
   "description": "",
   "repository": "https://github.com/Quartz/lint",
   "main": "index.js",
