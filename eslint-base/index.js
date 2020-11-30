@@ -9,7 +9,6 @@ module.exports = {
 
 	extends: [
 		'plugin:jest/recommended',
-		'plugin:testcafe/recommended',
 		'plugin:@typescript-eslint/recommended',
 	],
 
@@ -31,7 +30,6 @@ module.exports = {
 		'es',
 		'import',
 		'jest',
-		'testcafe',
 	],
 
 	rules: {
