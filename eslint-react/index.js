@@ -11,6 +11,13 @@ module.exports = {
 	],
 
 	rules: {
+		// This rule is being deprecated due to improved browser behavior. It makes
+		// it very difficult to implement a controlled input component (especially
+		// <select>).
+		//
+		// https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/pull/757
+		'jsx-a11y/no-onchange': 'off',
+
 		'jsx-quotes': [
 			'error',
 			'prefer-double',
