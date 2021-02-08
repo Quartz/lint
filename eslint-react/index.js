@@ -18,6 +18,10 @@ module.exports = {
 		// https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/pull/757
 		'jsx-a11y/no-onchange': 'off',
 
+		// Deprecated rule due to improved browser support.
+		// https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/pull/713
+		'jsx-a11y/accessible-emoji': 'off',
+
 		'jsx-quotes': [
 			'error',
 			'prefer-double',
