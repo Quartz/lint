@@ -56,6 +56,13 @@ module.exports = {
 
 		/** END disabled rules (overriding extended plugins **/
 
+		'@typescript-eslint/consistent-type-assertions': [
+			'error',
+			{
+				assertionStyle: 'never',
+			}
+		],
+
 		'@typescript-eslint/no-extra-parens': [
 			'error',
 			'all',
