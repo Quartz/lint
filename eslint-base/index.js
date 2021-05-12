@@ -46,6 +46,10 @@ module.exports = {
 		// Not all code is transpiled (e.g., WebPack config).
 		'@typescript-eslint/no-var-requires': 'off',
 
+		// `noUnusedParameters` is provided by the TypeScript compiler;
+		// disabling the rule to prevent duplicate tooltips.
+		'@typescript-eslint/no-unused-vars': 'off',
+
 		// Superseded by the TypeScript version of this rule.
 		// https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-extra-parens.md
 		'no-extra-parens': 'off',
