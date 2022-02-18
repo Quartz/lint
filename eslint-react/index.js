@@ -1,7 +1,7 @@
 module.exports = {
 	extends: [
-		'@quartz/eslint-config-base',
 		'plugin:jsx-a11y/recommended',
+		'plugin:react/recommended',
 		'plugin:react-hooks/recommended',
 	],
 
@@ -61,10 +61,6 @@ module.exports = {
 			'tab',
 		],
 
-		'react/jsx-key': 'error',
-
-		'react/jsx-no-undef': 'error',
-
 		'react/jsx-pascal-case': [
 			'error',
 			{
@@ -72,10 +68,6 @@ module.exports = {
 				ignore: [],
 			},
 		],
-
-		'react/jsx-uses-react': 'error',
-
-		'react/jsx-uses-vars': 'error',
 
 		'react/jsx-wrap-multilines': [
 			'error',
@@ -113,8 +105,18 @@ module.exports = {
 			},
 		],
 
-		'react/prop-types': 'error',
+		'react/function-component-definition': 'error',
 	},
+
+	overrides: [
+		// Let TypeScript check prop types. It's smarter.
+		{
+			files: [ '**/*.tsx' ],
+			rules: {
+				'react/prop-types': 'off',
+			},
+		},
+	],
 
 	settings: {
 		react: {

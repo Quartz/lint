@@ -64,7 +64,7 @@ module.exports = {
 			'error',
 			{
 				assertionStyle: 'never',
-			}
+			},
 		],
 
 		'@typescript-eslint/no-extra-parens': [
@@ -177,14 +177,6 @@ module.exports = {
 				SwitchCase: 1,
 			},
 		],
-
-		'jest/no-disabled-tests': 'error',
-
-		'jest/no-focused-tests': 'error',
-
-		'jest/no-identical-title': 'error',
-
-		'jest/valid-expect': 'error',
 
 		'key-spacing': [
 			'error',
